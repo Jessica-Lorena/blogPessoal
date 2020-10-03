@@ -1,7 +1,6 @@
 ul.social-network {
     list-style: none;
     display: inline;
-  
     padding: 0;
   }
   
@@ -12,7 +11,7 @@ ul.social-network {
   }
   
   .faFacebook, .faLinkedin, .faInstagram{
-      color: white;
+      color: #6c757d;
   }
   
   .faFacebook:hover{
