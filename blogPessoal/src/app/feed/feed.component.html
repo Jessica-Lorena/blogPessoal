@@ -55,10 +55,10 @@
                                             <small>Tema: {{item.tema.descricao}}</small>
                                         </div>
                                         <div class="col-md-4 d-flex justify-content-end">
-                                            <button class="mr-3 btn btn-outline-info">
+                                            <button class="mr-3 btn btn-outline-info" [routerLink]="['/edit-post', item.id]">
                                                 Editar
                                             </button>
-                                            <button class="ml-3 btn btn-outline-danger">
+                                            <button class="ml-3 btn btn-outline-danger" [routerLink]="['/del-post', item.id]">
                                                 Apagar
                                             </button>
                                         </div>

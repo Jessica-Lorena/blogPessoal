@@ -19,6 +19,8 @@ export class PostTemaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
+    
     this.findAllTemas()
   }
 
@@ -36,7 +38,7 @@ export class PostTemaComponent implements OnInit {
 
   adicionar() {
     if (this.tema.descricao == null) {
-      alert('Preencha o campo de nome do tema corretamente')
+      alert('Preencha o campo de nome do tema corretamente!')
     } else {
       this.temaService.postTema(this.tema).subscribe((resp: Tema) => {
         this.tema = resp
