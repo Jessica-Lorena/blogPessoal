@@ -411,6 +411,8 @@ import { DeletePostagemComponent } from &#x27;./delete-postagem/delete-postagem.
 import { DeleteTemaComponent } from &#x27;./delete-tema/delete-tema.component&#x27;;
 import { AlertasComponent } from &#x27;./alertas/alertas.component&#x27;;
 
+import { HashLocationStrategy, LocationStrategy } from &#x27;@angular/common&#x27;
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -437,7 +439,10 @@ import { AlertasComponent } from &#x27;./alertas/alertas.component&#x27;;
     OrderModule,
     ModalModule.forRoot() //deixa eu importar esse ModalModule para qualquer componente que eu quiser
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass:HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
